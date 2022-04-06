@@ -4,7 +4,7 @@ This repository contains code and data for a study into the geography of NLP res
 
 ## Data
 
-In the [nlpgeo_data] folder you will find the data used in our analysis. These files were prepared based on the [ACL Anthology datatabase](https://github.com/acl-org/acl-anthology/tree/master/data/xml) (a snapshot from 17.02.2021) through automatic extraction and refinement, followed by some manual corrections. Moreover, the contents were anonimised by replacing each author's name with a quasi-random string of characters.
+In the [nlpgeo_data](nlpgeo_data) folder you will find the data used in our analysis. These files were prepared based on the [ACL Anthology datatabase](https://github.com/acl-org/acl-anthology/tree/master/data/xml) (a snapshot from 17.02.2021) through automatic extraction and refinement, followed by some manual corrections. Moreover, the contents were anonimised by replacing each author's name with a quasi-random string of characters.
 
 The following TSV files are included:
 * ```papers-ref.tsv```: describes publications. Included fields: event ID, publication ID, first author name (anonimised), their e-mail domain and affiliation location.
