@@ -13,7 +13,7 @@ The following TSV files are included:
 
 ## Code
 
-The code [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedure we performed in the study.
+The code in [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedure we performed in or study through the following steps (note that you can skip steps 1-X by using the data described above)
 
 TODO
 
