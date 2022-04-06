@@ -13,6 +13,8 @@ The following TSV files are included:
 
 ## Code
 
+The code [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedure we performed in the study.
+
 TODO
 
 ## Licence
