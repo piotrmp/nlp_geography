@@ -15,8 +15,8 @@ The following TSV files are included:
 
 The code in [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedure we performed in our study through the following steps (note that you can skip steps 1-X by using the data described above):
 
-1. Download a snapshot of [ACL Anthology datatabase](https://github.com/acl-org/acl-anthology/tree/master/data/xml),
-2. Run ```extract.py``` to extract the necessary data in ```papers.tsv``` and ```volumes.tsv```.
+1. Download a snapshot of [ACL Anthology XML files](https://github.com/acl-org/acl-anthology/tree/master/data/xml),
+2. Run ```extract.py``` to extract the necessary data in ```papers.tsv``` and ```volumes.tsv``` (you will need to point to the ACL XMLs in ```extract.py``` and provide a [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/) key.
 
 ## Licence
 
