@@ -24,6 +24,8 @@ The code in [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedur
 7. Run ```analyse1.py``` to perform the data analysis and produce the values and plots included in the publication (part I).
 8. Run ```analyse2.py``` for part II of the analysis.
 
+Note that the analysis scripts depend on a variety of libraries used for visualising the results.
+
 ## Licence
 
 * The data are released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) licence.
