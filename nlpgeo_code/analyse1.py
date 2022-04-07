@@ -7,6 +7,7 @@ from utils.gMapsQuery import initGeo, getLocationfromName, getCoordsfromName
 import random
 import pycountry_convert as pc
 import matplotlib.ticker as mtick
+from utils.wealth import initWealth, getWealth
 
 from utils.giniCoeff import diversity
 from utils.carboncost import distance_to_emissions
@@ -15,6 +16,8 @@ random.seed(0)
 dataPath = './'
 cachePath = './'
 initGeo(cachePath)
+
+initWealth(dataPath+'gdp.tsv')
 
 papers = np.loadtxt(dataPath + 'papers-ref.tsv', delimiter='\t', comments=None, dtype=str)
 volumes = np.loadtxt(dataPath + 'volumes-ref.tsv', delimiter='\t', comments=None, dtype=str)
@@ -335,8 +338,8 @@ countries=[getCountry(location) for location in papers[:, 4]]
 countriesS=countries*10
 
 countryP=[]
-travelMMeanP=[]
-travelRMeanP=[]
+plotY=[]
+plotX=[]
 sizeP=[]
 for country in countriesUold:
     travelsMade=np.array([travels_pre[i] for i in range(len(travels_pre)) if valid[i] and countries[i]==country])
@@ -345,8 +348,10 @@ for country in countriesUold:
     travelsRandom = np.array([travels_preS[i] for i in range(len(travels_preS)) if validS[i] and countriesS[i]==country])
     sizeP.append(len(travelsMade))
     countryP.append(country)
-    travelMMeanP.append((np.mean(travelsRandom)-np.mean(travelsMade)))
-    travelRMeanP.append(np.mean(travelsRandom))
+    #plotY.append((np.mean(travelsRandom) - np.mean(travelsMade)))
+    #plotX.append(np.mean(travelsRandom))
+    plotY.append((np.mean(travelsMade)/np.mean(travelsRandom)))
+    plotX.append((getWealth(country)))
     print(country)
     print(np.mean(travelsMade)/np.mean(travelsRandom))
 
@@ -358,16 +363,17 @@ nameDict = {'NA': 'North America', 'AS': 'Asia','EU': 'Europe', 'OC': 'Australia
 fig, ax = plt.subplots(figsize=(12, 5))
 
 for continent in colorDict.keys():
-    plt.scatter([travelRMeanP[i] for i in range(len(countryP)) if continents[i]==continent], [travelMMeanP[i] for i in range(len(countryP)) if continents[i]==continent],c=[colorDict[continent]],label=continent,s=100)
+    plt.scatter([plotX[i] for i in range(len(countryP)) if continents[i] == continent], [plotY[i] for i in range(len(countryP)) if continents[i] == continent], c=[colorDict[continent]], label=continent, s=100)
 
 for i in range(len(countryP)):
-        plt.text(x=travelRMeanP[i], y=travelMMeanP[i], s=countryP[i], size=10)
+        plt.text(x=plotX[i], y=plotY[i], s=countryP[i], size=10)
 
 ax.legend()
-plt.ylabel("Travel distance reduction (km.)")
-plt.xlabel("Expected travel distance (km.)")
+plt.ylabel("Length of travels made / length of travels expected")
+plt.xlabel("GDP per capita ($)")
+ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
 #plt.xlim(4000, 15000)
-#plt.ylim(0, 15000)
-plt.plot([4500, 14000], [0, 0], '--', color='black')
+#plt.ylim(0, 1.11)
+#plt.plot([4500, 14000], [0, 0], '--', color='black')
 
-plt.savefig(dataPath + 'locality.pdf', bbox_inches='tight')
+plt.savefig(dataPath + 'locality2.pdf', bbox_inches='tight')
