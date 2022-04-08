@@ -27,7 +27,7 @@ The code in [nlpgeo_code](nlpgeo_code) folder can be used replicate the procedur
 7. Run ```analyse1.py``` to perform the data analysis and produce the values and plots included in the publication (part I).
 8. Run ```analyse2.py``` for part II of the analysis.
 
-Note that the scripts use the [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/) through [a Python client](https://github.com/googlemaps/google-maps-services-python). This means you will need to [obtain an API key](https://developers.google.com/maps/get-started), e.g. during a free trial on [Google CLoud](https://cloud.google.com/). Moreover, the analysis scripts depend on a variety of libraries used for visualising the results.
+Note that the scripts use the [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/) through [a Python client](https://github.com/googlemaps/google-maps-services-python). This means you will need to [obtain an API key](https://developers.google.com/maps/get-started), e.g. through a free trial of [Google Cloud](https://cloud.google.com/), to follow the procedure. Moreover, the analysis scripts depend on a variety of libraries used for visualising the results.
 
 ## Licence
 
