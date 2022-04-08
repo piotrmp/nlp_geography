@@ -10,6 +10,8 @@ The following TSV files are included:
 * ```papers-ref.tsv```: describes publications. Included fields: event ID, publication ID, first author name (anonimised), their e-mail domain, affiliation location and its geographic coordinates (latitude, longitude).
 * ```volumes-ref.tsv```: describes places where publications are presented, e.g. a single conference session, a workshops or a journal volume. Included fields: event ID, name, year and location.
 * ```venues-ref.tsv```: describes groups of events, e.g. a conference including all the sessions. Included fields: group ID, year, location and name.
+
+Additionally, we provide:
 * ```gdp.tsv```: country-wise GDP per capita in 2018 according to [Maddison Project Database](https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020).
 
 ## Code
