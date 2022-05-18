@@ -1,6 +1,6 @@
 # NLP Geography
 
-This repository contains code and data for a study into the geography of NLP research, answering question such as: Where do the researchers carry out the work? Where do they present it? What is the environmental cost of travelling to NLP conferences? Do the events attract diverse participation? The results were described in the article *[Using NLP to quantify the environmental cost and diversity benefits of in-person NLP conferences](TODO)* presented at the ACL 2022 conference in Dublin.
+This repository contains code and data for a study into the geography of NLP research, answering question such as: Where do the researchers carry out the work? Where do they present it? What is the environmental cost of travelling to NLP conferences? Do the events attract diverse participation? The results were described in the article *[Using NLP to quantify the environmental cost and diversity benefits of in-person NLP conferences](https://aclanthology.org/2022.findings-acl.304/)* presented at the ACL 2022 conference in Dublin.
 
 ## Data
 
@@ -36,4 +36,4 @@ Note that the scripts use the [Google Maps Geocoding API](https://developers.goo
 
 ## Citation
 
-TODO
+Piotr Przybyła and Matthew Shardlow. 2022. [Using NLP to quantify the environmental cost and diversity benefits of in-person NLP conferences](https://aclanthology.org/2022.findings-acl.304/). In *Findings of the Association for Computational Linguistics: ACL 2022*, pages 3853–3863, Dublin, Ireland. Association for Computational Linguistics.
